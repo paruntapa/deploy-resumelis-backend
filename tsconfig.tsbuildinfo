@@ -1,0 +1,1 @@
+{"root":["./index.ts","./middleware.ts","./middleware/auth.ts","./controllers/authcontroller.ts","./models/user.ts","./models/db.ts","./routes/authrouter.ts","./routes/proroute.ts"],"errors":true,"version":"5.8.2"}
