@@ -4,7 +4,7 @@ import JobListing from "./JobListing ";
 dotenv.config();
 
 const connectDB = async () => {
-  const mongoDB: string = process.env.mongodb || "";
+  const mongoDB: string = process.env.MONGODB || "";
   try {
     await mongoose.connect(mongoDB);
     console.log("Connected to MongoDB");
