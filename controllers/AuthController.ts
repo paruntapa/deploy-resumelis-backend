@@ -17,7 +17,7 @@ export const signup = async (req: any, res: any) => {
     const newUserModel = new UserModel({ name, email, password });
     newUserModel.password = await bcrypt.hash(password, 10);
     await newUserModel.save();
-    res.status(201).json({
+    res.status(200).json({
       message: "Signup successfully",
       success: true,
     });
@@ -55,8 +55,6 @@ export const login = async (req: any, res: any) => {
       email,
       name: userDb.name,
     });
-
-    res.status(200).json({ message: "Login successful" });
   } catch (error) {
     res.status(500).json({ message: "Login failed" + error });
   }
