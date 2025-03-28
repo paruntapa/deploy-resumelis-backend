@@ -4,7 +4,7 @@ export const getRelevantJobs = async (jobtitle: string) => {
   let config = {
     method: "get",
     maxBodyLength: Infinity,
-    url: `https://remotive.com/api/remote-jobs?search=${jobtitle}&limit=15`,
+    url: `https://remotive.com/api/remote-jobs?search=${jobtitle}&limit=10`,
     headers: {
       accept:
         "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
