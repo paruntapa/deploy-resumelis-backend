@@ -29,7 +29,7 @@ const s3 = new S3Client({
 
 const app = express();
 const corsOptions = {
-  origin: "http://18.208.115.67:3000",
+  origin: "http://98.80.112.7:3000",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
