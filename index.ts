@@ -28,8 +28,23 @@ const s3 = new S3Client({
 });
 
 const app = express();
+const allowedOrigins = [
+  "https://jobrec.telzac.site",
+  "https://jobrec.telzac.site:3000",
+  "http://jobrec.telzac.site",
+  "http://jobrec.telzac.site:3000",
+  "http://98.80.112.7:3000",
+  "http://localhost:3000",
+  "http://your-other-domain.com"
+];
 const corsOptions = {
-  origin: "http://98.80.112.7:3000",
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
