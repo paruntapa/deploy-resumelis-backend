@@ -29,6 +29,8 @@ const s3 = new S3Client({
 
 const app = express();
 const allowedOrigins = [
+  "https://www.jobrec.telzac.site:3000",
+  "https://www.jobrec.telzac.site",
   "https://jobrec.telzac.site",
   "https://jobrec.telzac.site:3000",
   "http://jobrec.telzac.site",
